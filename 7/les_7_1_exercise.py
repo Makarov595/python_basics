@@ -29,7 +29,9 @@ class Matrix:
         return my_str
 
     def __add__(self, other_matrix):
-        return self.list_for_class + other_matrix.list_for_class
+        for i, el in enumerate(self.list_for_class):
+            for j, el_2 in enumerate(el):
+                return self.list_for_class[i][j] + other_matrix.list_for_class[i][j]
 
 
 my_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
@@ -40,5 +42,5 @@ print(a)
 
 b = Matrix(my_list2)
 print(b)
-c = a + b
-print(c)
+
+print(a + b)
